@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<style>
+    .Task
+    {
+        width: 100%;
+        height: 150px;
+        background-color: aqua;
+        border-radius: 10px;
+        text-align: center;
+        padding-top: 20px;
+    }
+</style>
+
+<body>
+    
+    <script>
+        class Person
+        {
+            name
+            age
+
+            constructor(name, age)
+            {
+                this.name = name
+                this.age = age
+            }
+
+            static getFieldStr(person)
+            {
+                let str = ""
+                str += "<p>" + arr.name + "</p>" + "<p>" + arr.age + "</p>"
+                return str
+            }
+            static getDataStr(arr)
+            {
+                let str = getFieldStr(arr)
+                return ("<div>" + str + "</div>")
+            }
+        }
+
+        class Employee extends Person 
+        {
+            post
+
+            constructor(name, age, post)
+            {
+                super(name, age)
+                this.post = post
+            }
+            static getFieldStr(person)
+            {
+                let str = ""
+                str += "<p>" + arr.name + "</p>" + "<p>" + arr.age + "</p>" + "<p>" + arr.post + "</p>"
+                return str
+            }
+            
+        }
+        
+        let arr = []
+
+        while (true)
+        {
+            let name = prompt("Employee: Введите ФИО")
+            if (name === "") break;
+
+            let age = prompt("Employee: Введите возраст")
+            if (age === "") break;
+
+            let post = prompt("Employee: Введите должность")
+            if (post === "") break;
+
+            arr.push(new Employee(name, age, post))
+        }
+
+        while (true)
+        {
+            let name = prompt("Person: Введите ФИО")
+            if (name === "") break;
+
+            let age = prompt("Person: Введите возраст")
+            if (age === "") break;
+
+            arr.push(new Person(name, age))
+        }
+
+        document.body.innerHTML = arr;  
+    </script>
+</body>
+
+</html>

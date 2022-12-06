@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<style>
+    .Task1
+    {
+        width: 100%;
+        height: 150px;
+        background-color: burlywood;
+        border-radius: 10px;
+        text-align: center;
+        padding-top: 5%;
+    }
+</style>
+<body>
+    <div id="Text" class="Task1"></div>
+<script>
+    function Task1 ()
+        {
+            let b = confirm("Отобразить список дней недели на английском?");
+
+            let lang = {
+                "ru": ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+                "en": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            }
+
+            if (b)
+                document.getElementById("Text").innerHTML = lang["en"];
+            else
+                document.getElementById("Text").innerHTML = lang["ru"];
+        };
+    Task1();
+</script>
+</body>
+</html>
